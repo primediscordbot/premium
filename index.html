@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="logo-container">
-            <img src="your-bot-logo.png" alt="Prime Bot Logo" class="logo">
+            <img src="IMG_7980.png" alt="Prime Bot Logo" class="logo">
             <h1>Prime Bot</h1>
         </div>
     </header>
@@ -18,18 +18,17 @@
         <section class="premium-plans">
             <h2>Premium Plans</h2>
             
-            <!-- Sliding Button -->
+            <!-- Sliding Button for Monthly/Annual Toggle -->
             <div class="plan-toggle">
-                <label for="plan-toggle" class="toggle-label">Monthly/Annual</label>
-                <input type="checkbox" id="plan-toggle" class="toggle-input">
-                <div class="toggle-btn"></div>
+                <button id="toggle-button" class="toggle-btn">Switch to Annual</button>
             </div>
             
             <!-- Plan Details -->
             <div class="plan-details">
                 <div class="plan" id="user-premium">
                     <h3>User Premium</h3>
-                    <p>$1/month or $7/year</p>
+                    <p id="user-price">$1/month</p>
+                    <p id="user-annual-price" class="annual-price" style="display:none;">$7/year</p>
                     <ul>
                         <li>Priority Support</li>
                         <li>Access to Premium Only User Commands</li>
@@ -42,7 +41,8 @@
                 
                 <div class="plan" id="guild-premium">
                     <h3>Guild Premium</h3>
-                    <p>$2.99/month or $14.99/year</p>
+                    <p id="guild-price">$2.99/month</p>
+                    <p id="guild-annual-price" class="annual-price" style="display:none;">$14.99/year</p>
                     <ul>
                         <li>Get 1 free user premium</li>
                         <li>Priority Support</li>
@@ -70,5 +70,36 @@
     <footer class="footer">
         <p>&copy; 2024 Prime Bot. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const userPrice = document.getElementById('user-price');
+        const userAnnualPrice = document.getElementById('user-annual-price');
+        const guildPrice = document.getElementById('guild-price');
+        const guildAnnualPrice = document.getElementById('guild-annual-price');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', function() {
+            const isMonthly = userPrice.style.display !== 'none';
+
+            if (isMonthly) {
+                // Switch to Annual
+                userPrice.style.display = 'none';
+                userAnnualPrice.style.display = 'block';
+                guildPrice.style.display = 'none';
+                guildAnnualPrice.style.display = 'block';
+                body.style.background = '#2a3d54';  // Darker background for Annual
+                toggleButton.textContent = "Switch to Monthly";
+            } else {
+                // Switch to Monthly
+                userPrice.style.display = 'block';
+                userAnnualPrice.style.display = 'none';
+                guildPrice.style.display = 'block';
+                guildAnnualPrice.style.display = 'none';
+                body.style.background = '#f4f4f4';  // Lighter background for Monthly
+                toggleButton.textContent = "Switch to Annual";
+            }
+        });
+    </script>
 </body>
 </html>
