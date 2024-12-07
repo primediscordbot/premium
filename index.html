@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="logo-container">
-            <img src="IMG_7980.png" alt="Prime Bot Logo" class="logo">
+            <img src="IMG_7982.png" alt="Prime Bot Logo" class="logo">
             <h1>Prime Bot</h1>
         </div>
     </header>
@@ -18,9 +18,10 @@
         <section class="premium-plans">
             <h2>Premium Plans</h2>
             
-            <!-- Sliding Button for Monthly/Annual Toggle -->
+            <!-- Monthly/Annual Text -->
             <div class="plan-toggle">
-                <button id="toggle-button" class="toggle-btn">Switch to Annual</button>
+                <span id="toggle-label">Monthly</span>
+                <button id="toggle-button" class="toggle-btn"></button>
             </div>
             
             <!-- Plan Details -->
@@ -73,6 +74,7 @@
 
     <script>
         const toggleButton = document.getElementById('toggle-button');
+        const toggleLabel = document.getElementById('toggle-label');
         const userPrice = document.getElementById('user-price');
         const userAnnualPrice = document.getElementById('user-annual-price');
         const guildPrice = document.getElementById('guild-price');
@@ -89,7 +91,8 @@
                 guildPrice.style.display = 'none';
                 guildAnnualPrice.style.display = 'block';
                 body.style.background = '#2a3d54';  // Darker background for Annual
-                toggleButton.textContent = "Switch to Monthly";
+                toggleLabel.textContent = "Annual";
+                toggleButton.classList.add('toggled');
             } else {
                 // Switch to Monthly
                 userPrice.style.display = 'block';
@@ -97,7 +100,8 @@
                 guildPrice.style.display = 'block';
                 guildAnnualPrice.style.display = 'none';
                 body.style.background = '#f4f4f4';  // Lighter background for Monthly
-                toggleButton.textContent = "Switch to Annual";
+                toggleLabel.textContent = "Monthly";
+                toggleButton.classList.remove('toggled');
             }
         });
     </script>
