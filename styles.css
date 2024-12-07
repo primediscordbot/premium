@@ -58,24 +58,44 @@ header h1 {
 /* Sliding Button for Monthly/Annual Toggle */
 .plan-toggle {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin-bottom: 20px;
 }
 
-.toggle-btn {
-    padding: 10px 20px;
-    background-color: #283e51;
-    color: white;
+#toggle-label {
     font-size: 1.2rem;
-    border: none;
+    margin-bottom: 10px;
+}
+
+.toggle-btn {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.toggle-btn:hover {
+.toggle-btn:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-btn.toggled {
     background-color: #4b79a1;
+}
+
+.toggle-btn.toggled:before {
+    transform: translateX(30px);
 }
 
 /* Plan Details */
