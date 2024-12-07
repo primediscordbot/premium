@@ -3,85 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Features</title>
+    <title>Prime Bot Premium Features</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
-        <h1>Prime Bot Features Comparison</h1>
+        <div class="logo-container">
+            <img src="your-bot-logo.png" alt="Prime Bot Logo" class="logo">
+            <h1>Prime Bot</h1>
+        </div>
     </header>
+    
     <main class="content">
-        <section class="feature-comparison">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Premium</th>
-                        <th>Free</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Greet Autodel</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                    </tr>
-                    <tr>
-                        <td>Autoresponder</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Autoreact</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Media Channels</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Greet Channels</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Vanity Roles</td>
-                        <td>Unlimited</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Tagcheck Channels</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Easytag Channels</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>SS Verification Channels</td>
-                        <td>Unlimited</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Whitelists</td>
-                        <td>Unlimited</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Snipe Vanity</td>
-                        <td>Yes</td>
-                        <td>No</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="premium-plans">
+            <h2>Premium Plans</h2>
+            
+            <!-- Sliding Button -->
+            <div class="plan-toggle">
+                <label for="plan-toggle" class="toggle-label">Monthly/Annual</label>
+                <input type="checkbox" id="plan-toggle" class="toggle-input">
+                <div class="toggle-btn"></div>
+            </div>
+            
+            <!-- Plan Details -->
+            <div class="plan-details">
+                <div class="plan" id="user-premium">
+                    <h3>User Premium</h3>
+                    <p>$1/month or $7/year</p>
+                    <ul>
+                        <li>Priority Support</li>
+                        <li>Access to Premium Only User Commands</li>
+                        <li>Access to hidden channels</li>
+                        <li>Get new feature leaks</li>
+                        <li>Get benefits in economy system</li>
+                        <li>Snipe Vanity Access</li>
+                    </ul>
+                </div>
+                
+                <div class="plan" id="guild-premium">
+                    <h3>Guild Premium</h3>
+                    <p>$2.99/month or $14.99/year</p>
+                    <ul>
+                        <li>Get 1 free user premium</li>
+                        <li>Priority Support</li>
+                        <li>Greet Autodel unlock</li>
+                        <li>Unlimited autoresponders</li>
+                        <li>Unlimited autoreactors</li>
+                        <li>Unlimited Media Channels</li>
+                        <li>Unlimited Greet Channels</li>
+                        <li>Unlimited Vanity Roles</li>
+                        <li>Unlimited Tagcheck Channels</li>
+                        <li>Unlimited Easytag Channels</li>
+                        <li>Unlimited SS Verification</li>
+                        <li>Unlimited Whitelists</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Purchase Button -->
+            <div class="purchase-btn-container">
+                <a href="https://discord.gg/VMkv79vBfX" class="purchase-btn">Purchase Now</a>
+            </div>
         </section>
     </main>
+    
     <footer class="footer">
-        <p>&copy; 2024 Prime. All Rights Reserved.</p>
+        <p>&copy; 2024 Prime Bot. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
